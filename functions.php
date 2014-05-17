@@ -290,3 +290,32 @@ function bloxy_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'bloxy_body_classes' );
 
+
+/**
+ * If a post has no post title, we set it to "Untitled".
+ * This way the single-page post view is easily accessible.
+ *
+ */
+function bloxy_title($title) {
+    if ($title == '') {
+        return 'Untitled';
+    } else {
+        return $title;
+    }
+}
+add_filter('the_title', 'bloxy_title');
+
+/**
+ * Load the CSS file.
+ *
+ */
+function bloxy_styles()  
+{ 
+  wp_register_style( 'style', 
+    get_template_directory_uri() . '/style.css');
+
+  // enqueing:
+  wp_enqueue_style( 'style' );
+}
+add_action('wp_enqueue_scripts', 'bloxy_styles');
+

@@ -9,17 +9,6 @@
 	<ul>	
 		<?php if ( ! ( dynamic_sidebar( 'sidebar-1' ) + dynamic_sidebar( 'sidebar-2' ) ) == true) : ?>
 
-			<li class="sb-orange">
-				<div class="sb-head">
-			    	<h2><?php _e( 'Hey there!', 'bloxy'); ?></h2>
-			    </div>
-			    <div class="sb-body">
-			    	<p><?php _e( 'Welcome on', 'bloxy');?> <?php bloginfo('name'); ?>!</p>
-			        <p><?php _e( 'Your visit is highly esteemed. Please feel free to comment and join the discussion. You can also grab the', 'bloxy'); ?> <a href="<?php bloginfo('rss2_url'); ?>"><?php _e( 'RSS feed', 'bloxy'); ?></a>.
-			    </div>
-			    <div class="sb-foot">
-			    </div> 
-			</li>
 			<li class="sb-blue">
 				<div class="sb-head">
 			    	<h2><?php _e( 'Categories', 'bloxy'); ?></h2>

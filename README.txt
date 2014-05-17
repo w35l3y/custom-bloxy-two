@@ -1,15 +1,15 @@
-==== Black Mesa ====
+==== Bloxy Two ====
 
 Author: Stefan Kröber
 Author URI: http://www.arcance.net
-Theme URI: http://www.arcance.net/freebies
+Theme URI: http://www.arcance.net/freebies/bloxy-two
 Description: A snazzy WordPress theme with some glassy effects - now without bubbles! You can choose between an orange or blue sidebar or use both colors and up to three widget areas in the footer. On top, it supports left and right sidebars, featured posts, multiple post formats, is translation ready and comes with a custom editor style.
 
 
 
 
 
-== CONTENT
+== CONTENT ==
 
  * Installation
  * Limitations & Known Issues
@@ -65,6 +65,18 @@ Write me an email: http://www.arcance.net/contact
 
 
 == CHANGELOG ==
+
+Version 1.6.1 - 23.08.2012
+
+Fixed: Container for wp_link_pages() is now properly cleared
+Fixed: Fixed styling and z-indexes of header navigation
+
+Changed: Theme URI changed to arcance.net/freebies/bloxy-two
+
+Added: Copyright information in footer.php and style.css
+Added: If a post has no title, it will now use "Untitled" so that the single-post view is easily accessible even if comments are disabled
+
+- - - - -
 
 Version 1.6 - 07.08.2012
 
