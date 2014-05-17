@@ -1,33 +1,43 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Default_Theme
+ * The template for displaying the footer.
  */
 ?>
+
+</div>
+<div id="footer-wrapper">
+	<p id="colophon" role="contentinfo">
+		<?php bloginfo('name'); ?>
+		<?php echo ' '.__('is powered by','bloxy') . ' <a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a> ' . __('and the free <a href="www.arcance.net/freebies" title="Get this and more free WordPress themes, too">Bloxy Two</a> theme.', 'bloxy')
+		?>
+	</p>
+	<div id="footer" class="cf">
+		<div class="third">
+			<?php 
+				if ( ! dynamic_sidebar('sidebar-3') )
+			?>
 		</div>
-    <div class="clear"></div>
-</div>
-<div id="wrapperFoot">
-	<div id="foot" class="aligncenter">
-    	<span id="copy" class="aligncenter">
-			<?php bloginfo('name'); ?> is powered by <a href="http://wordpress.org/">WordPress</a>
-             &middot; 
-            free <a href="http://www.arcance.net/" title="Arcance.net">Bloxy Two</a> theme by <a href="http://www.arcance.net/" title="Arcance.net">Arcance</a>
-        </span>
-		<div class="footBox alignleft">
-        	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Left Footer') ) : else : ?><?php endif; ?> 
-        </div>
-    	<div class="footBox alignright">
-        	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right Footer') ) : else : ?><?php endif; ?> 
-        </div>
-		<div class="footBox aligncenter">
-        	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Middle Footer') ) : else : ?><?php endif; ?> 
-        </div>
-        <div class="clear"></div>
-    </div>
+		<div class="third">
+			<?php 
+				if ( ! dynamic_sidebar('sidebar-4') )
+			?>
+		</div>
+		<div class="third">
+			<?php 
+				if ( ! dynamic_sidebar('sidebar-5') )
+			?>
+		</div>
+	</div>
 </div>
 
-<?php wp_footer(); ?>
 
+	<?php
+	/* Always have wp_footer() just before the closing </body>
+	 * tag of your theme, or you will break many plugins, which
+	 * generally use this hook to reference JavaScript files.
+	 */
+
+	wp_footer();
+	?>
 </body>
 </html>
