@@ -1,8 +1,13 @@
-<div id="search">
-	<form method="get" id="searchform" action="<?php echo home_url( '/' ) ?>">
+<?php
+/**
+ * The template for displaying search forms
+ *
+ */
+?>
+	<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<fieldset>
-			<label for="s"><input value="<?php echo $search = __('Search the blog...') ?>" onfocus="if(this.value=='<?php echo $search ?>') this.value=''" id="s" name="s" title="Enter keywords" type="text" /></label>
-			<label for="searchsubmit"><input src="<?php bloginfo('stylesheet_directory'); ?>/images/searchsubmit.png" name="searchsubmit" id="searchsubmit" value="" title="Search" type="image" /></label>
+			<input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search...', 'bloxy' ); ?>" />
+			<label for="searchsubmit"><input src="<?php echo get_stylesheet_directory_uri(); ?>/img/search-head-submit.png" name="searchsubmit" id="searchsubmit" value="" title="<?php _e( 'Search', 'bloxy');?>" type="image" /></label>
 		</fieldset>
 	</form>
-</div>
+	

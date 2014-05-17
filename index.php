@@ -1,54 +1,46 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Default_Theme
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
  */
 
-get_header();
-?>
+get_header(); ?>
 
-<div id="content">
+			<div id="content" role="main">
 
-    <?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
-    
-    <div class="articleHead">
-        <div class="articleDate"><?php the_time("d") ?><br /><?php the_time("M") ?></div>
-        <div class="articleTitle">
-        	<h2><a id="post-<?php the_ID(); ?>" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-        </div>
-    </div>
-    <div class="articleContent">
-        <?php the_content('&nbsp;'); ?>
-        <!--<?php trackback_rdf(); ?>-->
-        <div class="articleMeta">
-            <span class="small alignleft tags"><?php the_tags(__('Tags') . ': ', ', ', '<br />'); ?></span> 
-            <span class="small alignright author"><?php the_author() ?><?php edit_post_link(__('Edit'),' &middot; ',''); ?></span>
-            <div class="clear"></div>
-            <span class="small alignleft cat"><?php echo __('Category') ?>: <?php the_category(', ') ?></span>
-            <span class="small alignright com"><?php comments_popup_link('0 comentários', '1 comentário', '% comentários');
-			?></span>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="articleFoot"></div>
-        
-		<?php endwhile; ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-<div class="navigation">
-    <div class="alignleft white"><?php next_posts_link('&laquo; Previous entries') ?></div>
-    <div class="alignright white"><?php previous_posts_link('Next entries &raquo;') ?></div>
-    <div class="clear"></div>
-</div>
-		
-	<?php else : ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 
-	<h2 class="firstHeading">No posts found.</h2></div>
+				<?php endwhile; ?>
 
-	<?php endif; ?>
+				<?php bloxy_content_nav( 'nav' ); ?>
 
-</div>
+			<?php else : ?>
+				
+				<div class="article page no-results not-found" id="post-0">
+					<div class="head">
+						<h2 class="entry-title"><?php _e( 'Nothing found.', 'bloxy' ); ?></h2>
+					</div>
+					<div class="content">
+						<p><?php _e( 'Apologies, but the page you are looking for might have been removed, had its name changed or is temporarily unavailable. Perhaps searching will help find a related post.', 'bloxy' ); ?></p>
+					</div>
+					<div class="foot">		
+					</div>
+				</div>
+				
+			<?php endif; ?>
+
+			</div><!-- #content -->
+
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
