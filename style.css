@@ -1,0 +1,575 @@
+/*  
+
+Theme Name: Bloxy Two
+Description: A snazzy WordPress theme with some glassy effects - now without bubbles! You can choose between an orange or blue sidebar or use both colors and up to three widget areas in the footer.
+Tags: white, blue, black, orange, yellow, dark, two-columns, fixed-width, right-sidebar
+Version: 0.9.8.1
+Author: Stefan Kr&ouml;ber (Arcance)
+Author URI: http://www.arcance.net	
+
+*/
+
+* {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	}
+.clear {
+	clear:both;
+	}
+html {
+}
+body {
+	background: url('images/bodyBg.gif');
+}
+
+#wrapperIE {
+	background: #fff6ae; 
+	color: #000000; 
+	width: 100%;
+}
+#IE {
+	width: 870px;
+}
+#wrapperHead {
+	height: 243px;
+	width: 100%;
+	background: url('images/headBg.png') repeat-x;
+}
+#head {
+	height: 243px;
+	width: 870px;
+	position: relative;
+}
+
+#wrapperBody {
+	width: 100%;
+	background: url('images/bodyLight.png') no-repeat 50% 0;
+}
+#body {
+	width: 870px;
+}
+
+#wrapperFoot {
+	width: 100%;
+	background: url('images/footBg.png') repeat-x 0 30px;
+	margin: 30px 0 0 0;
+}
+#foot {
+	width: 870px;
+	background: url('images/footSeperator.png') no-repeat left 37px;
+}
+
+#nav {
+	height: 30px;
+	position: relative;
+	top: 65px;
+	float: right;
+}
+#logo {
+	position: absolute;
+	top: 109px;
+}
+#rss {
+	height: 55px;
+	width: 138px;
+	position: absolute;
+	top: 155px;
+	left: 732px;
+	background: url('images/feed.png') no-repeat top right;
+}
+#search {
+	background: url('images/searchBg.png') right top no-repeat;
+	width: 222px;
+	height: 44px;
+	position: absolute;
+	top: 180px;
+	left: 648px;
+}
+#searchform fieldset {
+	border: none;
+}
+#s {
+	background: none;
+	float: right;
+	width: 182px;
+	border: none;
+	margin: 15px 5px 0 0;
+}
+#searchsubmit {
+	background: transparent;
+	display: inline;
+	width: 35px;
+	height: 44px;
+	border: none;
+}
+.searchform {
+	width: 222px;
+	height: 44px;
+	margin: 20px 0 0 0;
+}
+
+#content {
+	width: 600px;
+	float: left;
+}
+
+.articleHead {
+	min-height: 50px;
+	width: 600px;
+	margin: 15px 0 0 0;
+	background: url('images/articleHead.png') no-repeat;
+	overflow: hidden;
+	border-bottom: 1px solid #084597;
+}
+.articleDate {
+	width: 40px;
+	float: left;
+	position: relative;
+	top: 5px;
+	left: 20px;
+	margin: 0 40px 0 0;
+}
+.articleTitle {
+	padding: 0 0 0 80px;
+}
+.articleContent {
+	width: 570px;
+	padding: 10px 15px 0 15px;
+	background: url('images/articleBg.png') repeat-y;
+}
+.articleMeta {
+	width: 570px;
+	margin: 10px 0 0 0;
+	background: url('images/articleMeta.png') repeat-x;
+}
+.articleFoot {
+	height: 10px;
+	width: 600px;
+	background: url('images/articleFoot.png') no-repeat;
+}
+.more-link {
+	height: 35px;
+	width: 130px;
+	position: relative;
+	left: -21px;
+	display: block;
+	margin: 15px 0 0 0;
+	background: url('images/read.png') no-repeat;
+}
+
+.pageHead {
+	min-height: 45px;
+	width: 600px;
+	margin: 20px 0 0 0;
+	background: url('images/pageHead.png') no-repeat;
+	border-bottom: 1px solid #084597;
+}
+.pageContent {
+	width: 570px;
+	padding: 10px 15px 0 15px;
+	background: url('images/articleBg.png') repeat-y;
+}
+.pageFoot {
+	height: 10px;
+	width: 600px;
+	background: url('images/articleFoot.png') no-repeat;
+}
+
+.comment {
+	margin: 20px 0 0 0;
+}
+.commentUser {
+	width: 125px;
+	float: left;
+	margin: 0 0 0 0;
+}
+.commentText {
+	width: 475px;
+	float: right;
+}
+.commentArrow {
+	height: 30px;
+	width: 17px;
+	float: left;
+	position: relative;
+	top: 20px;
+	background: url('images/commentArrow.png') no-repeat;
+}
+.commentTextHead {
+	height: 10px;
+	width: 460px;
+	margin: 0 0 0 15px;
+	background: url('images/commentTextHead.png') no-repeat;
+}
+.commentTextContent {
+	min-height: 50px;
+	width: 430px;
+	margin: 0 0 0 15px;
+	padding: 0 15px 0 15px;
+	background: url('images/commentTextBg.png') repeat-y;
+}
+.commentTextFoot {
+	height: 10px;
+	width: 460px;
+	margin: 0 0 0 15px;
+	background: url('images/commentTextFoot.png') no-repeat;
+}
+.gravatar {
+	margin: 5px 0 10px 5px;
+}
+.gravatarFrame {
+	height: 60px;
+	width: 60px;
+	background: url('images/gravatarFrame.png') no-repeat;
+	position: absolute;
+}
+
+#sidebar {
+	width: 250px;
+	float: right;
+}
+.sbBox {
+	width: 220px;
+	padding: 10px 15px 0 15px;
+	background: url('images/sidebarBoxBg.png') repeat-y;
+}
+.specialBox {
+	background: url('images/sidebarBoxBgSpecial.png') repeat-y;
+}
+.sbBoxHead {
+	min-height: 45px;
+	width: 250px;
+	margin: 20px 0 0 0;
+	background: url('images/sidebarBoxHead.png') no-repeat;
+	border-bottom: 1px solid #084597;
+}
+.specialHead {
+	background: url('images/sidebarBoxHeadSpecial.png') no-repeat;
+	border-bottom: 1px solid #d65d0f;
+}
+.sbBoxHead h2 {
+	padding: 10px 0 0 15px;
+}
+.sbBoxFoot {
+	height: 10px;
+	width: 250px;
+	background: url('images/sidebarBoxFoot.png') no-repeat;
+}
+.specialFoot {
+	background: url('images/sidebarBoxFootSpecial.png') no-repeat;
+}
+
+.footBox {
+	width: 290px;
+	height: 100%;
+}
+#copy {
+	width: 870px;
+	display: block;
+	margin: 20px 0 10px 0;
+}
+.navigation {
+	margin: 20px 0;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 10px 0 0;
+}
+.aligncenter {
+	margin: 0 auto 0 auto!important;
+}
+.alignright {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+.wp-caption {
+	float: absolute;
+	color:	#212121;
+	font-size: 11px;
+	border: 1px solid #cadbe6;
+	text-align: center;
+	background-color: #ebf3f8;
+	margin: 15px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.wp-caption img {
+	margin: 5px;
+	padding: 0;
+	border: 0 none;
+}
+
+.small {
+	font-size: 11px;
+}
+
+body {
+	font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
+	font-size: 13px;
+}
+a {
+	text-decoration: none;
+	color: #135bac;
+}
+a:hover {
+	color: #ff9000;
+}
+.white a {
+	color: #ff9000;
+}
+.white a:hover {
+	color: #135bac;
+}
+#nav a {
+	display:block;
+	height: 25px;
+	padding: 4px 7px 0 0;
+	background: url('images/navNormalRight.png') no-repeat right top;
+	color: #000;
+}
+#nav .current_page_item a {
+	display:block;
+	height: 25px;
+	padding: 4px 7px 0 0;
+	background: url('images/navActiveRight.png') no-repeat right top;
+}
+#rss a {
+	color: #fff;
+}
+#rss a:hover {
+	color: #fed207;
+}
+#s {
+	font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
+	font-size: 11px;
+}
+.articleHead a, .pageHead a {
+	color: #fff;
+}
+.articleHead a:hover, .articleHead a:active, .pageHead a:hover, .pageHead a:active  {
+	color: #fed207;
+}
+.commentUser .nick a {
+	color: #ff9000!important;
+}
+.commentUser .nick a:hover {
+	color: #135bac;
+}
+.commentUser .small a {
+	color: #fff;
+}
+.commentUser .small a:hover {
+	color: #135bac;
+}
+.specialBox a {
+	color: #000;
+}
+.specialBox a:hover {
+	color: #135bac;
+}
+#foot a {
+	color: #5e0d00;
+}
+#foot a:hover {
+	color: #000;
+}
+blockquote, cite {
+	padding: 0 0 0 20px;
+}
+h1 a {
+	color: #fff;
+}
+h1 a:hover, h1 a:active {
+	color: #fed207;
+}
+#copy a {
+	color: #ff9000;
+}
+#copy a:hover, #copy a:active {
+	color: #fff;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	color: #fff;
+}
+.articleContent h1, .pageContent h1 { 
+	font-size: 22px;
+	color: #000;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+h2.firstHeading {
+	margin: 15px 0 0 0;
+}
+.articleHead h2 {
+	padding: 15px 0 0 0;
+}
+.pageHead h2 {
+	padding: 10px 0 0 15px;
+}
+.specialHead h2 {
+	color: #5e0d00;
+}
+.articleContent h2, .pageContent h2 { 
+	font-size: 18px;
+	color: #000;
+}
+#foot h2 {
+	color: #5e0d00;
+	padding: 0 0 15px 0;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+}
+.h3comments {
+	color: #fff;
+	padding: 20px 0 0 0;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000;
+}
+h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #000;
+}
+p{
+	padding: 5px 0;
+}
+p.white {
+	color: #fff;
+}
+#blogDescription {
+	color: #fed207;
+}
+#rss {
+	color: #fff;
+	font-size: 11px;
+	line-height: 16px;
+}
+.articleDate {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	color: #570c00;
+	text-align: center;
+}
+.tags {
+	background: url('images/tags.gif') no-repeat;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 15px;
+}
+.cat {
+	background: url('images/cat.gif') no-repeat;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 15px;
+}
+.com {
+	background: url('images/comments.gif') no-repeat;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 15px;
+}
+.author {
+	background: url('images/author.gif') no-repeat;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 15px;
+}
+.options {
+	display: block;
+	padding: 10px 0 0 0;
+}	
+.commentUser {
+	color: #fff;
+}
+.specialBox{
+	color: #5e0d00;
+}
+#foot {
+	color: #000;
+}
+#copy {
+	color: #ff6f00;
+	text-align: center;
+}
+
+.articleContent ul, .articleContent ol, .pageContent ul, .pageContent ol {
+	margin: 10px 0 10px 30px;
+}
+#nav ul {
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+}
+#nav li {
+	height: 25px;
+	margin: 0 0 0 15px; 
+	padding: 0 0 0 7px;
+	float: left;
+	background: url('images/navNormalLeft.png') no-repeat left top;  
+}
+#nav .current_page_item {
+	height: 25px;
+	margin: 0 0 0 15px; 
+	padding: 0 0 0 7px;
+	float: left;
+	background: url('images/navActiveLeft.png') no-repeat left top;  
+}
+ol.commentlist, ol.commentlist ul.children {
+	list-style: none;
+}
+#sidebar ul {
+	list-style: none;
+}
+#sidebar ul li li {
+	background: url('images/bullet.png') left 7px no-repeat;
+	padding: 5px 0 5px 15px;
+}
+#foot ul {
+	list-style: none;
+	padding: 35px 20px 0 0;
+}
+#foot .alignright ul {
+	margin: 0 0 0 10px;
+}
+#foot .alignright ul li ul{
+	margin: 0 0 0 25px;
+}
+#foot ul li ul {
+	list-style: disc;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+#foot ul li ul li {
+	padding: 5px 0 5px 0;
+}
+
+input#author, input#email, input#url, textarea#comment {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	border: 2px solid #707070;
+	background: url('images/semitransBg.png');
+	color: #fff;
+}
+.articleContent input, .articleContent textarea, .pageContent input, .pageContent textarea {
+	padding: 5px;
+	border: 2px solid #eee;
+}
