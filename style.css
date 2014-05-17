@@ -573,3 +573,7 @@ input#author, input#email, input#url, textarea#comment {
 	padding: 5px;
 	border: 2px solid #eee;
 }
+
+pre code {
+	overflow: auto;
+}

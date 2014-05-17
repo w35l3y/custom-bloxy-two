@@ -20,14 +20,15 @@ get_header();
         </div>
     </div>
     <div class="articleContent">
-        <?php the_content('<p></p>'); ?>
+        <?php the_content('&nbsp;'); ?>
         <!--<?php trackback_rdf(); ?>-->
         <div class="articleMeta">
-            <span class="small alignleft tags"><?php the_tags('Tags: ', ', ', '<br />'); ?></span> 
-            <span class="small alignright author"><?php the_author() ?><?php edit_post_link('Edit',' &middot; ',''); ?></span>
+            <span class="small alignleft tags"><?php the_tags(__('Tags') . ': ', ', ', '<br />'); ?></span> 
+            <span class="small alignright author"><?php the_author() ?><?php edit_post_link(__('Edit'),' &middot; ',''); ?></span>
             <div class="clear"></div>
-            <span class="small alignleft cat">Category: <?php the_category(', ') ?></span> 					
-            <span class="small alignright com"><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></span>
+            <span class="small alignleft cat"><?php echo __('Category') ?>: <?php the_category(', ') ?></span>
+            <span class="small alignright com"><?php comments_popup_link('0 comentários', '1 comentário', '% comentários');
+			?></span>
             <div class="clear"></div>
         </div>
     </div>

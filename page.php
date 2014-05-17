@@ -20,7 +20,7 @@ get_header();
     	</div>
     	<div class="pageFoot"></div>
         
-	<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+	<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages') . ':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 	      				
 	<?php endwhile; endif; ?>
 

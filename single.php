@@ -19,14 +19,14 @@ get_header();
 
 		 <!--<?php trackback_rdf(); ?>-->
 
-				<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages') . ':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 	      				
 		<div class="articleMeta">
-            <span class="small alignleft tags"><?php the_tags('Tags: ', ', ', '<br />'); ?></span> 
-            <span class="small alignright author"><?php the_author() ?><?php edit_post_link('Edit',' &middot; ',''); ?></span>
+            <span class="small alignleft tags"><?php the_tags(__('Tags') . ': ', ', ', '<br />'); ?></span> 
+            <span class="small alignright author"><?php the_author() ?><?php edit_post_link(__('Edit'),' &middot; ',''); ?></span>
             <div class="clear"></div>
-            <span class="small alignleft cat">Category: <?php the_category(', ') ?></span> 					
-            <span class="small alignright com"><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></span>
+            <span class="small alignleft cat"><?php echo __('Category') ?>: <?php the_category(', ') ?></span> 					
+            <span class="small alignright com"><?php comments_popup_link('0 comentários', '1 comentário', '% comentários'); ?></span>
             <div class="clear"></div>
             <span class="small options">
             	<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
@@ -56,7 +56,7 @@ get_header();
 	<?php endwhile; else: ?>
     	<div id="content">
 
-        	<h2 class="firstHeading">No posts found.</h2>
+        	<h2 class="firstHeading"><?php echo __('No posts found.'); ?></h2>
 
 		</div>
 <?php endif; ?>
