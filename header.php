@@ -40,12 +40,11 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'P&acute;gina %s', 'bloxy' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'bloxy' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <!--[if lt IE 9]>
@@ -92,7 +91,6 @@
 			<?php wp_nav_menu( array( 'menu' => 'primary' ) ); ?>
 		</div>
 		<div id="feed-n-search">
-			<a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Subscribe to RSS Feed', 'bloxy') ?></a>
 			<?php get_search_form(); ?>
 		</div>
 	</div> <!-- #header -->

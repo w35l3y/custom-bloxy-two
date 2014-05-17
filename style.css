@@ -1,13 +1,18 @@
 /*
 Theme Name: Bloxy Two
-Theme URI: http://www.arcance.net/freebies
+Theme URI: http://www.arcance.net/freebies/bloxy-two
 Author: Stefan Kröber
 Author URI: http://www.arcance.net
 Description: A snazzy WordPress theme with some glassy effects - now without bubbles! You can choose between an orange or blue sidebar or use both colors and up to three widget areas in the footer. On top, it supports left and right sidebars, featured posts, multiple post formats, is translation ready and comes with a custom editor style.
-Version: 1.6
+Version: 1.6.1
 License: GNU GPL v3
 License URI: http://www.gnu.org/licenses/gpl-3.0-standalone.html
 Tags: black, blue, orange, yellow, white, gray, dark, two-columns, left-sidebar, fixed-width, editor-style, sticky-post, translation-ready, post-formats, custom-menu
+*/
+
+/*
+Bloxy Two WordPress Theme, Copyright 2012 Stefan Kröber (Arcance.net).
+Bloxy Two is distributed under the terms of the GNU GPL v3.
 */
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
@@ -113,12 +118,12 @@ body {
 }
 #access {
 	position: absolute;
-	top: 50px;
-	float: right;
+	top: 45px;
+	z-index: 4;
 }
 #feed-n-search {
 	position: absolute;
-	top: 145px;
+	top: 165px;
 	right: 10px;
 	float: right;
 	width: 250px;
@@ -386,6 +391,7 @@ td:hover, tr:hover {
 	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .page-link {
+	clear: both;
 	color: #999;
 }
 .page-link span {
@@ -395,92 +401,76 @@ td:hover, tr:hover {
 
 /* @group Header Items */
 #logo h1 {
-	padding-bottom: 5px;
-}
-#access ul {
-	position: relative;
-	z-index: 4;
-}
-
-#access ul li ul {
-	background: #f7f7f7;
+	padding-bottom: 0;
 }
 
 #access a {
 	display: block;
-	padding: 0 3px 5px 10px;
-}
-#access li {
 	position: relative;
-	float: right;
-	padding: 0;
-	background:none;
-	z-index: 3;
-}
-#access ul li {
-	float: right;
-	padding: 0 7px 0 0;
-	margin: 0 10px 15px 5px;
-	background: url('img/nav-right.png') no-repeat right top;
-}
-#access ul li a {
 	padding:0 3px 5px 10px;
 	background:url('img/nav-left.png') no-repeat left top;
 }
-#access ul li:hover a {
+#access li:hover a {
 	background-position: 0 -40px; color: #fff;
 }
-
-#access ul li:hover {
-	background-position: right -40px;
-}
-#access ul li ul {
-}
-#access ul li ul li {
-	position: relative;
-	text-align:left;
-	border:none;
-	margin:0;
+#access li li a {
+	padding: 3px 10px;
 	background: #daeff9;
 }
-#access ul li ul li ul li{
-	text-align:left;
-	border:none;
-	margin:0;
-	background-color: #abdbf1;
-}
-#access ul li ul li:hover {
+#access li li a:hover {
 	background-color: #ffeacf;
 }
-#access ul li ul li a {
-	padding: 5px;
+#access li li li a {
+	background-color: #abdbf1;
 }
-#access ul li ul li ul li:hover {
+#access li li li a:hover {
 	background-color: #ffdaab;
 }
-#access li ul {
+#access ul ul {
 	position: absolute;
-	left: -999em;
+	top: 30px;
+	margin: 0;
+	z-index: 5;
+}
+#access ul ul ul {
+	position: absolute;
+	top: 0;
+	left: 130px;
+}
+#access li {
+	position: relative;
+	display: block;
+	float: left;
+	padding: 0 7px 0 0;
+	margin: 0 10px 10px 5px;
+	background: url('img/nav-right.png') no-repeat right top;
+}
+#access li:hover {
+	background-position: right -40px;
+}
+#access li:hover li {
+	display: block;
+}
+#access li:hover li li {
+	display: none;
+}
+#access li li {
+	position: relative;
+	float: none;
 	margin: 0;
 	padding: 0;
+	width: 130px;
+	background: #daeff9;
+	display: none;
 }
-#access li li {}
-#access li ul a {
-	background: none;
+#access li li:hover li {
+	display: block;
 }
-#access li ul ul {
-	margin: 0 0 0 0;
+#access li li li {
+	background-color: #abdbf1;
 }
-#access li:hover ul ul, #access li:hover ul ul ul {
-	left: -999em;
-}
-#access li:hover ul, #access li li:hover ul, #access li li li:hover ul {
-	left: auto;
-}
-#access ul li ul li:hover, {
-	background: #ccc;
-	color:#fff;
-}
+
+
 #feed-n-search a {
 	font-size: 13px;
 	height: 16px;
